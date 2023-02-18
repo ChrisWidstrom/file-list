@@ -2,7 +2,19 @@ import React from "react";
 import {createRoot} from 'react-dom/client'
 
 const FileList = ({data}) => (
-    <h1>File List</h1>
+    <table>
+        {data.map( item => (
+            <FileListItem />
+        ))}
+    </table>
+)
+
+const FileListItem = () => (
+    <tr>
+        <td>Column 1</td>
+        <td>Column 2</td>
+        <td>Column 3</td>
+    </tr>
 )
 
 const data = [
