@@ -11,10 +11,26 @@ const FileList = ({data}) => (
 
 const FileListItem = () => (
     <tr>
-        <td>Column 1</td>
-        <td>Column 2</td>
-        <td>Column 3</td>
+        <td><Icon /><FileName /></td>
+        <td><Description /></td>
+        <td><Type /></td>
     </tr>
+)
+
+const Icon = () => (
+    <span>Icon</span>
+)
+
+const FileName = () => (
+    <span>File Name</span>
+)
+
+const Description = () => (
+    <p>This is a file.</p>
+)
+
+const Type = () => (
+    <p>File Type</p>
 )
 
 const data = [
@@ -23,8 +39,8 @@ const data = [
         name: 'legal',
         type: 'folder',
         updated_at: '2019-07-07 21:24:00',
-        latestCommit: {
-            message: 'Initial commit'
+        details: {
+            description: 'Initial commit'
         }
     },
     {
@@ -32,8 +48,8 @@ const data = [
         name: 'Company Comment',
         type: 'file',
         updated_at: '2019-17-07 21:24:00',
-        latestCommit: {
-            message: 'Updates text'
+        details: {
+            description: 'Updates text'
         }
     },
     {
@@ -41,8 +57,8 @@ const data = [
         name: 'Organisation Chart',
         type: 'file',
         updated_at: '2019-12-07 21:24:00',
-        latestCommit: {
-            message: 'Adds level to org.'
+        details: {
+            description: 'Adds level to org.'
         }
     }
 ]
