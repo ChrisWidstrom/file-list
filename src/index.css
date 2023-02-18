@@ -1,0 +1,29 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.fa-folder, .fa-file {
+    color: lightseagreen;
+}
+
+.table {
+    width: 70vw;
+    margin: 50px auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0 10px;
+}
+
+th {
+    padding-bottom: 5px;
+}
+
+tr {
+    border-bottom: 1px solid lightgray;
+}
+
+.title {
+    padding-left: 10px;
+}

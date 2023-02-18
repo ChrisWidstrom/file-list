@@ -1,15 +1,21 @@
 import React from "react";
 import { createRoot } from 'react-dom/client'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFolder, faFile, faCircleQuestion } from '@fortawesome/free-solid-svg-icons'
 import moment from 'moment';
+import './index.css';
 
 const FileList = ({data}) => (
-    <table>
+    <table className="table">
         <tbody>
+            <tr>
+                <th>Title</th>
+                <th>Comment</th>
+                <th>Uploaded</th>
+            </tr>
+
         {data.map( item => (
             <FileListItem item={item} key={item.id}/>
         ))}
+
         </tbody>
     </table>
 )
@@ -24,25 +30,24 @@ const FileListItem = ({item}) => (
 
 const Icon = ({type}) => {
 
-    let iconType;
+    let iconClass = '';
 
     switch (type) {
         case 'folder':
-            iconType = faFolder;
-            break;
-        case 'file':
-            iconType = faFile;
+            iconClass = 'fa fa-folder';
             break;
         default:
-            iconType = faCircleQuestion;
+        case 'file':
+            iconClass = 'fa fa-regular fa-file';
+            break;
     }
 
-    return <FontAwesomeIcon icon={iconType} />
+    return <i class={iconClass}></i>
 }
 
 
 const FileName = ({fileName}) => (
-    <span>{fileName}</span>
+    <span className="title">{fileName}</span>
 )
 
 const Description = ({description}) => (
@@ -67,14 +72,32 @@ const data = [
         id: 2,
         name: 'Company Comment',
         type: 'file',
-        uploaded_at: '2019-17-07 21:24:00',
+        uploaded_at: '2019-07-07 21:24:00',
         details: {
             description: 'Updates text'
         }
     },
     {
         id: 3,
-        name: 'Organisation Chart',
+        name: 'List of key employees',
+        type: 'file',
+        uploaded_at: '2019-12-07 21:24:00',
+        details: {
+            description: 'Adds level to org.'
+        }
+    },
+    {
+        id: 4,
+        name: 'List of largest suppliers',
+        type: 'file',
+        uploaded_at: '2019-12-07 21:24:00',
+        details: {
+            description: 'Adds level to org.'
+        }
+    },
+    {
+        id: 5,
+        name: 'List of largest customers',
         type: 'file',
         uploaded_at: '2019-12-07 21:24:00',
         details: {
