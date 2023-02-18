@@ -1,9 +1,30 @@
 body {
     font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0 auto;
 }
 
 .fa-folder, .fa-file {
     color: lightseagreen;
+}
+
+.header {
+    background: #FAF7F4;
+    height: 10vh;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.heading {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2rem;
+    color: black;
 }
 
 .table {
@@ -14,14 +35,18 @@ body {
 
 td {
     padding: 0 10px;
+    font-size: 0.8rem;
 }
 
 th {
     padding-bottom: 5px;
+    padding-left: 10px;
+    text-align: left;
+    font-weight: bold;
 }
 
 tr {
-    border-bottom: 1px solid lightgray;
+    border-bottom: 0.5px solid lightgray;
 }
 
 .title {
