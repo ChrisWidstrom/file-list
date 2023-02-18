@@ -11,7 +11,7 @@ body {
 }
 
 .fa-folder, .fa-file {
-    color: lightseagreen;
+    color: #383D34;
 }
 
 .header {
@@ -42,7 +42,8 @@ th {
     padding-bottom: 5px;
     padding-left: 10px;
     text-align: left;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.8rem;
 }
 
 tr {

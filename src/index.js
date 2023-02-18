@@ -15,9 +15,9 @@ const Main = ({data}) => (
     <table className="table">
       <tbody>
         <tr>
-          <th>Title</th>
-          <th>Comment</th>
-          <th>Uploaded</th>
+          <th>TITLE</th>
+          <th>COMMENT</th>
+          <th>UPLOADED</th>
         </tr>
 
         {data.map((item) => (
@@ -30,7 +30,7 @@ const Main = ({data}) => (
 
 const Header = () => (
   <div className="header">
-    <span className="heading">File Manager</span>
+    <span className="heading">File List</span>
   </div>
 );
 
@@ -77,16 +77,16 @@ const data = [
     type: "folder",
     uploaded_at: "2019-07-07 21:24:00",
     details: {
-      description: "Initial commit",
+      description: "Reviewed",
     },
   },
   {
     id: 2,
-    name: "Company Comment",
+    name: "Company comment",
     type: "file",
     uploaded_at: "2019-07-07 21:24:00",
     details: {
-      description: "Updates text",
+      description: "Needs updating",
     },
   },
   {
@@ -95,7 +95,7 @@ const data = [
     type: "file",
     uploaded_at: "2019-12-07 21:24:00",
     details: {
-      description: "Adds level to org.",
+      description: "Adds level to org",
     },
   },
   {
@@ -104,7 +104,7 @@ const data = [
     type: "file",
     uploaded_at: "2019-12-07 21:24:00",
     details: {
-      description: "Adds level to org.",
+      description: "Needs reviewing",
     },
   },
   {
@@ -113,7 +113,7 @@ const data = [
     type: "file",
     uploaded_at: "2019-12-07 21:24:00",
     details: {
-      description: "Adds level to org.",
+      description: "Reviewed, ok",
     },
   },
 ];
